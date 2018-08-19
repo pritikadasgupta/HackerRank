@@ -17,7 +17,20 @@ class Solution:
                 root.right=cur
         return root
     def levelOrder(self,root):
-        #Write your code here
+        result = []
+        if root:
+            queue = [root]
+            while queue:
+                node = queue.pop()
+                result.append(node.data)
+                print(result)
+                if node.left:
+                    queue.insert(0, node.left)
+                if node.right:
+                    queue.insert(0, node.right)
+        result = ' '.join(map(str,result))
+        print(result)
+        # return result
 T=int(input())
 myTree=Solution()
 root=None

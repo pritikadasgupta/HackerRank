@@ -1,21 +1,33 @@
 class Node:
-    def __init__(self,data):
-        self.right=self.left=None
-        self.data = data
+	def __init__(self,data):
+		self.right=self.left=None
+		self.data = data
+
 class Solution:
-    def insert(self,root,data):
-        if root==None:
-            return Node(data)
+	def insert(self,root,data):
+		if root==None:
+			return Node(data)
+		else:
+			if data<=root.data:
+				cur=self.insert(root.left,data)
+				root.left=cur
+			else:
+				cur=self.insert(root.right,data)
+				root.right=cur
+		return root
+	def getHeight(self,root):
+        if root:
+            left = 0
+            right = 0
+            if root.left:
+                left = 1 + self.getHeight(root.left)
+            if root.right:
+                right = 1 + self.getHeight(root.right)
+            return max(left, right)
         else:
-            if data<=root.data:
-                cur=self.insert(root.left,data)
-                root.left=cur
-            else:
-                cur=self.insert(root.right,data)
-                root.right=cur
-        return root
-    def getHeight(self,root):
-        #Write your code here
+            return 0
+
+
 T=int(input())
 myTree=Solution()
 root=None
