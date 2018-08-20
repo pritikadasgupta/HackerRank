@@ -18,3 +18,4 @@ if __name__ == '__main__':
         q = list(map(int, input().rstrip().split()))
 
         minimumBribes(q)
+        "hi"
