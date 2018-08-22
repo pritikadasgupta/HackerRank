@@ -8,9 +8,14 @@ import sys
 
 # Complete the solve function below.
 def prime(num):
-	if num % :
+	divisors=[]
+	for i in range(1,num+1):
+		if num % i == 0:
+			divisors.append(i)
+	prime_divisors = [1,num]
+	if (divisors[i]==prime_divisors for j in prime_divisors):
 		result = "Prime"
-	else
+	else:
 		result = "Not Prime"
 	return result
 
