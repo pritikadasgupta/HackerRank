@@ -13,10 +13,11 @@ def prime(num):
 		if num % i == 0:
 			divisors.append(i)
 	prime_divisors = [1,num]
-	if (divisors[i]==prime_divisors for j in prime_divisors):
-		result = "Prime"
-	else:
-		result = "Not Prime"
+	for j in range(0,len(prime_divisors)):
+		if 	divisors[j]==prime_divisors[j]:
+			result = "Prime"
+		else:
+			result = "Not Prime"
 	return result
 
 if __name__ == '__main__':
