@@ -7,9 +7,17 @@ import re
 import sys
 
 # Complete the solve function below.
-def prime():
+def prime(num):
+	if num % :
+		result = "Prime"
+	else
+		result = "Not Prime"
+	return result
 
 if __name__ == '__main__':
-    tip_percent = int(input())
+    test_cases = int(input())
 
-    tax_percent = int(input())
+    for i in range(0,test_cases):
+	    num = int(input())
+	    result = prime(num)
+	    print(result)
