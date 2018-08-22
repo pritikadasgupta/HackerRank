@@ -8,19 +8,18 @@ import sys
 
 # Complete the solve function below.
 def prime(num):
-	if num ==1:
+	result = "Prime"
+	if num % 2 == 0 or num <2: #even and 1
 		result = "Not prime"
-	else:
-		divisors=[]
+	else: #odd numbers
+		# divisors=[]
 		for i in range(1,num+1):
 			if num % i == 0:
-				divisors.append(i)
-		prime_divisors = [1,num]
-		for j in range(0,len(prime_divisors)):
-			if 	divisors[j]==prime_divisors[j]:
-				result = "Prime"
-			else:
-				result = "Not prime"
+				# divisors.append(i)
+				if i > 1 and i !=num:
+					# print(i)
+					result = "Not prime"
+					break
 	return result
 
 if __name__ == '__main__':
