@@ -5,7 +5,7 @@ import os
 import random
 import re
 import sys
-import datetime
+# import datetime
 
 # Complete the solve function below.
 def fine(dayR, monthR, yearR, dayD, monthD, yearD):
@@ -19,6 +19,10 @@ def fine(dayR, monthR, yearR, dayD, monthD, yearD):
         result = 0
       else:
         result = 15*(dayR - dayD) #after expected day
+    if monthR < monthD:
+      result = 0
+  elif yearR < yearD:
+    result = 0
   return str(result)
 
 if __name__ == '__main__':
@@ -30,3 +34,12 @@ if __name__ == '__main__':
   print(fine(dayR, monthR, yearR, dayD, monthD, yearD))
 
 
+#test cases
+# 2 6 2014
+# 5 7 2014
+
+# 31 12 2009
+# 1 1 2010
+
+# 1 1 1
+# 8 8 8
