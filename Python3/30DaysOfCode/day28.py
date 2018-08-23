@@ -6,17 +6,17 @@ import random
 import re
 import sys
 
-def firstNameEmails(firstName,emailID):
-	for i in range(0,len(emailID)):
-		emailID[i]
-
-
 if __name__ == '__main__':
     N = int(input())
     firstName = []
-    emailID = []
+    # emailID = []
+    isGmail = re.compile("^[a-z\.]+@gmail.com$")
+	accounts = dict()
     for N_itr in range(N):
         firstNameEmailID = input().split()
-        firstName.append() = firstNameEmailID[0]
-        emailID.append() = firstNameEmailID[1]
-        firstNameEmails(firstName,emailID)
+        # firstName.append() = firstNameEmailID[0]
+        # emailID.append() = firstNameEmailID[1]
+		if isGmail.match(firstNameEmailID[1]):
+			accounts[firstNameEmailID[1]] = firstNameEmailID[0]
+	sorted_names = sorted(accounts.values())
+	print(*sorted_names, sep="\n")
