@@ -8,11 +8,16 @@ import sys
 
 def bitwise(n,k):
 	result = 0
-    for j in range(1, n):
-        for i in range(j + 1, n + 1):
-            pointer = j & i
-            if k > pointer > result:
-                result = pointer
+	if ((k-1)|k) <= n:
+		result = k-1
+	else:
+		result= k-2
+
+    # for j in range(1, n):
+    #     for i in range(j + 1, n + 1):
+    #         pointer = j & i
+    #         if k > pointer > result:
+    #             result = pointer
     return result
 
 
