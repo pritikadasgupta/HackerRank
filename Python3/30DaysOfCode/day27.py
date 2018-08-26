@@ -8,32 +8,47 @@ def minimum_index(seq):
     return min_idx
 
 ##START
+import random
 
 class TestDataEmptyArray(object):
     
     @staticmethod
     def get_array():
-        # complete this function
+        result = [] #empty array
+        return result
 
 class TestDataUniqueValues(object):
-
+    result = set()
+    while len(result) < 10:
+        result.add(random.randint(0,100))
     @staticmethod
     def get_array():
-        # complete this function
+        # array of size at least 2 with all unique elements
+        result = TestDataUniqueValues.result
+        return list(result)
 
     @staticmethod
     def get_expected_result():
-        # complete this function
+        # return the expected minimum value index for this array
+        result = TestDataUniqueValues.get_array()
+        return result.index(min(result))
 
 class TestDataExactlyTwoDifferentMinimums(object):
-
+    result = set()
+    while len(result) < 10:
+        result.add(random.randint(0,100))
+    result = list(result)
+    result.append(min(result))
     @staticmethod
     def get_array():
-        # complete this function
-
+        # return an array where there are exactly two different minimum values
+        result = TestDataExactlyTwoDifferentMinimums.result
+        return result
     @staticmethod
     def get_expected_result():
-        # complete this function
+        # return the expected minimum value index for this array
+        result = TestDataExactlyTwoDifferentMinimums.get_array()
+        return result.index(min(result))
 
 ##FINISH
 
