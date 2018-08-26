@@ -10,7 +10,6 @@
 #!/bin/python3
 
 import math
-from scipy.stats import norm
 
 # Normal distribution
 # continuous distribution or a function that can take on values anywhere on the real line
@@ -37,12 +36,12 @@ if __name__ == '__main__':
 	mean, std = map(float, input().split()) #mean and std of X
 	a = float(input()) #  for question 1
 	l, u = map(float, input().split()) #lower and upper range (for question 2)
+	cdf = lambda x: 0.5 * (1 + math.erf((x - mean) / (std * (2 ** 0.5))))
 
-	result = norm.cdf(a,mean,std)
-
+	result = cdf(a)
 	print("{:.3f}".format(result))
 	# 0.401
 
-	result = norm.cdf(u,mean,std) - norm.cdf(l,mean,std)
+	result = cdf(u) - cdf(l)
 	print("{:.3f}".format(result))
 	# 0.341
