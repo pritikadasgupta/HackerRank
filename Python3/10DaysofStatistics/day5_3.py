@@ -15,13 +15,6 @@ import math
 # continuous distribution or a function that can take on values anywhere on the real line
 # The normal distribution is parameterized by two parameters: the mean of the distribution μ and the variance σ2.
 
-
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n-1)
-
 # #normal function (this works for PDF only)
 # def normal(mean,variance,x):
 # 	a = 1
