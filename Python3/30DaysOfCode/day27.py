@@ -7,6 +7,8 @@ def minimum_index(seq):
             min_idx = i
     return min_idx
 
+##START
+
 class TestDataEmptyArray(object):
     
     @staticmethod
@@ -32,6 +34,8 @@ class TestDataExactlyTwoDifferentMinimums(object):
     @staticmethod
     def get_expected_result():
         # complete this function
+
+##FINISH
 
 def TestWithEmptyArray():
     try:
