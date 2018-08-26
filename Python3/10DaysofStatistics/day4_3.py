@@ -32,7 +32,7 @@ def factorial(n):
     else:
         return n * factorial(n-1)
 
-#binomial probability mass function:
+#geometric probability mass function:
 def geometricPDF(p,x):
 	result = ((1-p)**(x-1))*p
 	return result
