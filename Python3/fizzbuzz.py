@@ -19,5 +19,8 @@
 # for i in range(1,101):
 #     print("FizzBuzz" if i%15==0 else "Fizz" if i%3==0 else "Buzz" if i%5==0 else i)
 
-# 9.70 points
-[print("FizzBuzz" if i%15==0 else "Fizz" if i%3==0 else "Buzz" if i%5==0 else i) for i in range(1,101)]
+# # 9.70 points
+# [print("FizzBuzz" if i%15==0 else "Fizz" if i%3==0 else "Buzz" if i%5==0 else i) for i in range(1,101)]
+# 
+# 13.4 points
+[print("Fizz"*(i%3==0)+(i%5==0)*"Buzz"or i) for i in range(1,101)]
