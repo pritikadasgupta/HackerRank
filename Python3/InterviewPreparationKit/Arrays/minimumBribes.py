@@ -8,14 +8,11 @@ import sys
 
 # Complete the minimumBribes function below.
 def minimumBribes(n,q):
-	# 1 cannot bribe (position 0, position 1)
-	# 2 can only bribe once (position 0 and 1)
-	# other positions can bribe once or twice (position x, x-1, x-2)
 	q=[j-1 for j in q]
 	numBribes=0
 	p=list(range(0,n))
 	for i,j in enumerate(q):
-		if q[i-4]==p[i-1]:
+		if j-i>2:
 			print("Too chaotic")
 			return
 		for k in range(max(j-1,0),i):
