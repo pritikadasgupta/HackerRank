@@ -18,15 +18,13 @@ def minimumSwaps(arr):
 	sortarr = sorted(arr)
 	# find lowest element
 	arrMin = min(arr)
-	#start with 0 position
-	i=0
-	while (arr!=sortarr):
+
+	for i in range(0,len(arr)-1):
 		pointer = arr.index(arrMin)
 		if arr[i]!=arr[pointer]:
 			swap(arr,i,pointer)
 			numSwaps+=1
 		arrMin+=1
-		i+=1
 	return numSwaps
 
 
