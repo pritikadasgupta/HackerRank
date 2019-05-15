@@ -19,16 +19,18 @@ def minimumBribes(n,q):
 			i=i-1
 		elif q[i-2]==p[i-1]:
 			numBribes+=1
-			p[i-1],p[i-2]=p[i-2],p[i-1]
+			# p[i-1],p[i-2]=p[i-2],p[i-1]
 			i=i-1
 		elif q[i-3]==p[i-1]:
 			numBribes+=2
-			p[i-1],p[i-2]=p[i-2],p[i-1]
-			p[i-2],p[i-3]=p[i-3],p[i-2]
+			# p[i-1],p[i-2]=p[i-2],p[i-1]
+			# p[i-2],p[i-3]=p[i-3],p[i-2]
 			i=i-1
 		elif q[i-4]==p[i-1]:
-			numBribes="Too chaotic"
-			i=-1
+			print("Too chaotic")
+			return
+		else:
+			i=i-1
 	print(numBribes)
 
 
