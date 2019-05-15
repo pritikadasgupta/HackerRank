@@ -7,20 +7,15 @@ import re
 import sys
 
 # Complete the minimumSwaps function below.
-def minimumSwaps(arr):
+def minimumSwaps(n,arr):
 	# initialize number of swaps
 	numSwaps = 0
-	# find lowest element
-	arrMin = min(arr)
-
-	for i in range(0,len(arr)-1):
-		pointer = arr.index(arrMin)
-		if arr[i]!=arr[pointer]:
-			arr[i], arr[pointer] = arr[pointer], arr[i] 
+	for i in range(0,n-1):
+		while arr[i] !=i+1:
+			pointer = arr[arr[i] - 1]
+			arr[arr[i] - 1],arr[i] = arr[i],pointer
 			numSwaps+=1
-		arrMin+=1
 	return numSwaps
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
@@ -29,7 +24,7 @@ if __name__ == '__main__':
 
     arr = list(map(int, input().rstrip().split()))
 
-    res = minimumSwaps(arr)
+    res = minimumSwaps(n,arr)
 
     fptr.write(str(res) + '\n')
 
