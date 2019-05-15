@@ -14,6 +14,7 @@ def swap(arr, pos1, pos2):
 def minimumSwaps(arr):
 	# initialize number of swaps
 	numSwaps = 0
+	#sort array
 	sortarr = sorted(arr)
 	# find lowest element
 	arrMin = min(arr)
@@ -21,11 +22,11 @@ def minimumSwaps(arr):
 	i=0
 	while (arr!=sortarr):
 		pointer = arr.index(arrMin)
-		swap(arr,i,pointer)
+		if arr[i]!=arr[pointer]:
+			swap(arr,i,pointer)
+			numSwaps+=1
 		arrMin+=1
 		i+=1
-		numSwaps+=1
-		print(arr)
 	return numSwaps
 
 
