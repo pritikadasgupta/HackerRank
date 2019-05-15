@@ -6,23 +6,17 @@ import random
 import re
 import sys
 
-def swap(arr, pos1, pos2): 
-	arr[pos1], arr[pos2] = arr[pos2], arr[pos1] 
-	return arr
-
 # Complete the minimumSwaps function below.
 def minimumSwaps(arr):
 	# initialize number of swaps
 	numSwaps = 0
-	#sort array
-	sortarr = sorted(arr)
 	# find lowest element
 	arrMin = min(arr)
 
 	for i in range(0,len(arr)-1):
 		pointer = arr.index(arrMin)
 		if arr[i]!=arr[pointer]:
-			swap(arr,i,pointer)
+			arr[i], arr[pointer] = arr[pointer], arr[i] 
 			numSwaps+=1
 		arrMin+=1
 	return numSwaps
