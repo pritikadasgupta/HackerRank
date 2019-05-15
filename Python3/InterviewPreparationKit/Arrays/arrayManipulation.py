@@ -8,12 +8,19 @@ import sys
 
 # Complete the arrayManipulation function below.
 def arrayManipulation(n, queries):
-    arr = [0]*n
+    arr = [0]*(n+1)
     for i in range(0,len(queries)):
-        for j in range(queries[i][0]-1,queries[i][1]):
-            arr[j]=arr[j]+queries[i][2]
-    return max(arr)
-
+        a,b,c = queries[i][0],queries[i][1],queries[i][2]
+        arr[a-1]+=c
+        if((b)<=len(arr)): 
+            arr[b] -= c;
+    max = 0
+    a = 0
+    for j in arr:
+        a+=j
+        if max<a:
+            max=a
+    return max
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
