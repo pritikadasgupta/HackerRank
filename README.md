@@ -1,5 +1,5 @@
 # HackerRank Solutions
-This repository contains my solutions (mainly from 2016-2017 although I'm updating many of them now (2025)) to various HackerRank challenges that I completed to practice my programming skills across multiple programming languages.
+This repository contains my solutions (mainly from 2016-2018 although I'm updating many of them now (2025)) to various HackerRank challenges that I completed to practice my programming skills across multiple programming languages.
 
 ## Repository Structure
 ```
@@ -115,4 +115,4 @@ This repository is licensed under the MIT License.
 Rose (Pritika) Dasgupta
 
 ## Last Updated
-Repository actively maintained/updated from 2016-2017, with some recent updates in 2025.
+Repository actively maintained/updated from 2016-2018, with some recent updates in 2025.
